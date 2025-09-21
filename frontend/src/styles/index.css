@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+body {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/bg-master.png');
+    background-size: cover;
+}
+
+.login-form-h{
+    height: 600px;
+}
+
+.table-h{
+    height: 550px;
+}
+
+.bg-blur {
+    overflow: hidden;
+}
+
+.bg-blur::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: no-repeat right;
+    background-size: cover;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+.bg-customer-1::before{
+    background-image: url("/bg-customer-1.png");
+    transition: 0.5s ease-in-out 0.1s;
+}
+
+.bg-customer-2::before{
+    background-image: url("/bg-customer-2.png");
+    transition: 0.5s ease-in-out 0.1s;
+}
+
+.bg-vendor-1::before{
+    background-image: url("/bg-vendor-1.png");
+    transition: 0.5s ease-in-out 0.1s;
+}
+
+.bg-vendor-2::before{
+    background-image: url("/bg-vendor-2.png");
+    transition: 0.5s ease-in-out 0.1s;
+}
+
+.bg-admin-1::before{
+    background-image: url("/bg-admin-1.png");
+    transition: 0.5s ease-in-out 0.1s;
+}
+
+@theme {
+    --color-custom-bg : #dee0e5;
+    --color-custom-bg-gradiant: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+    --shadow-custom-shadow: 0 0 2px 0 black;
+    --shadow-custom-shadow-inner: inset 0 1px 5px 0 black;
+}
